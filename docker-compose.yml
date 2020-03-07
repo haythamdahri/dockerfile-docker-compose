@@ -1,0 +1,12 @@
+version: '3.7'
+
+volumes:
+    data_crm_firebase_app: {}
+
+services:
+    web:
+        build: .
+        volumes: 
+            - data_crm_firebase_app:/app
+        ports:
+            - "4200:4200"
